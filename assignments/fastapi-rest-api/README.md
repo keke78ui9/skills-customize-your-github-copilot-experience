@@ -4,7 +4,22 @@
 
 Learn how to build and test a simple RESTful API using the FastAPI framework in Python. Practice designing endpoints, handling requests, and returning JSON responses.
 
-## 📝 Tasks
+## � Getting Started
+
+1. Install the required dependencies:
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+2. Run the development server:
+   ```bash
+   uvicorn main:app --reload
+   ```
+
+3. Open your browser and visit `http://127.0.0.1:8000` to see the welcome message
+4. Visit `http://127.0.0.1:8000/docs` to explore the interactive API documentation
+
+## �📝 Tasks
 
 ### 🛠️  Task 1: Set Up FastAPI Project
 
@@ -49,4 +64,30 @@ POST /items
   "description": "Lined pages"
 }
 Response: {"id": 3, "name": "Notebook", "description": "Lined pages"}
+```
+
+### 🛠️  Task 3: Add Input Validation and Error Handling
+
+#### Description
+Enhance your API with proper validation and error handling to make it more robust.
+
+#### Requirements
+Completed program should:
+
+- Add validation to ensure item names are not empty
+- Return a 404 status code when an item is not found
+- Handle duplicate IDs appropriately when creating items
+- Return clear error messages in JSON format
+
+#### Example
+```
+GET /items/999
+Response (404): {"detail": "Item not found"}
+
+POST /items
+{
+  "name": "",
+  "description": "Invalid item"
+}
+Response (422): {"detail": "Item name cannot be empty"}
 ```
