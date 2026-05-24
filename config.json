@@ -77,6 +77,30 @@
           "type": "txt"
         }
       ]
+    },
+    {
+      "id": "fastapi-testing",
+      "title": "Testing FastAPI Applications",
+      "description": "Write and measure tests for FastAPI APIs using pytest, fixtures, and coverage.",
+      "path": "assignments/fastapi-testing",
+      "dueDate": "2026-05-31",
+      "attachments": [
+        {
+          "name": "Starter Code",
+          "file": "starter-code.py",
+          "type": "python"
+        },
+        {
+          "name": "Requirements",
+          "file": "requirements.txt",
+          "type": "txt"
+        },
+        {
+          "name": "Sample Tests",
+          "file": "test_app.py",
+          "type": "python"
+        }
+      ]
     }
   ]
 }
